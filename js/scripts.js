@@ -7,8 +7,13 @@ $(function(){
     var numbers = [];
     for (var i = numberToFactor; i >= 1; i -= 1){
       numbers.push(i);
-      console.log(i);
     }
-    console.log(numbers);
+    var factoredNumbers = numbers.map(function(number){
+      for(var i = number; i >= 1; i -= 1){
+        return i * number;
+      }
+
+    });
+    console.log("factored numbers: ", factoredNumbers);
   });
 });
